@@ -1,0 +1,13 @@
+*
+!*/
+
+!.git*
+
+!*.tex
+!*.sty
+!*.cls
+!*.bib
+!*.bbx
+!*.fd
+!*.pdf
+!*.eps

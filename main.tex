@@ -1,0 +1,156 @@
+% ---------------------------------------------------------------------------
+% Author guideline and sample document for EG publication using LaTeX2e input
+% D.Fellner, v1.20, Jan 18, 2023
+
+\documentclass{egpubl}
+\usepackage{eurovis2024}
+
+% --- for  Annual CONFERENCE
+% \ConferenceSubmission   % uncomment for Conference submission
+% \ConferencePaper        % uncomment for (final) Conference Paper
+% \STAR                   % uncomment for STAR contribution
+% \Tutorial               % uncomment for Tutorial contribution
+% \ShortPresentation      % uncomment for (final) Short Conference Presentation
+% \Areas                  % uncomment for Areas contribution
+% \Education              % uncomment for Education contribution
+% \Poster                 % uncomment for Poster contribution
+% \DC                     % uncomment for Doctoral Consortium
+%
+% --- for  CGF Journal
+% \JournalSubmission    % uncomment for submission to Computer Graphics Forum
+% \JournalPaper         % uncomment for final version of Journal Paper
+%
+% --- for  CGF Journal: special issue
+% \SpecialIssueSubmission    % uncomment for submission to , special issue
+\SpecialIssuePaper         % uncomment for final version of Computer Graphics Forum, special issue
+%                          % EuroVis, SGP, Rendering, PG
+% --- for  EG Workshop Proceedings
+% \WsSubmission      % uncomment for submission to EG Workshop
+% \WsPaper           % uncomment for final version of EG Workshop contribution
+% \WsSubmissionJoint % for joint events, for example ICAT-EGVE
+% \WsPaperJoint      % for joint events, for example ICAT-EGVE
+% \Expressive        % for SBIM, CAe, NPAR
+% \DigitalHeritagePaper
+% \PaperL2P          % for events EG only asks for License to Publish
+
+% --- for EuroVis
+% for full papers use \SpecialIssuePaper
+% \STAREurovis   % for EuroVis additional material
+% \EuroVisPoster % for EuroVis additional material
+% \EuroVisShort  % for EuroVis additional material
+% \MedicalPrize  % uncomment for Medical Prize (Dirk Bartz) contribution, since 2021 part of EuroVis
+
+% Licences: for CGF Journal (EG conf. full papers and STARs, EuroVis conf. full papers and STARs, SR, SGP, PG)
+% please choose the correct license
+%\CGFStandardLicense
+\CGFccby
+%\CGFccbync
+%\CGFccbyncnd
+
+
+% !! *please* don't change anything above
+% !! unless you REALLY know what you are doing
+% ------------------------------------------------------------------------
+
+\usepackage[T1]{fontenc}
+\usepackage{dfadobe}
+
+% \usepackage{cite}  % comment out for biblatex with backend=biber
+% ---------------------------
+\biberVersion
+\BibtexOrBiblatex
+\usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex}
+% \addbibresource{egbibsample.bib}
+\bibliography{egbibsample}
+% ---------------------------
+\electronicVersion
+\PrintedOrElectronic
+% for including postscript figures
+% mind: package option 'draft' will replace PS figure by a filename within a frame
+\ifpdf \usepackage[pdftex]{graphicx} \pdfcompresslevel=9
+\else \usepackage[dvips]{graphicx} \fi
+
+\usepackage{egweblnk}
+% end of prologue
+
+\title[Curve Smoothing on Surface Meshes]{Adaptive and Robust Curve Smoothing on Surface Meshes with Geodesics and Penalty Potentials}
+
+% for anonymous conference submission please enter your SUBMISSION ID
+% instead of the author's name (and leave the affiliation blank) !!
+% for final version: please provide your *own* ORCID in the brackets following \orcid; see https://orcid.org/ for more details.
+\author[D. Fellner \& S. Behnke]
+{\parbox{\textwidth}{\centering D.\,W. Fellner\thanks{Chairman Eurographics Publications Board}$^{1,2}$\orcid{0000-0001-7756-0901}
+        and S. Behnke$^{2}$\orcid{0000-0001-5923-423X}
+%        S. Spencer$^2$\thanks{Chairman Siggraph Publications Board}
+        }
+        \\
+% For Computer Graphics Forum: Please use the abbreviation of your first name.
+{\parbox{\textwidth}{\centering $^1$TU Darmstadt \& Fraunhofer IGD, Germany\\
+         $^2$Graz University of Technology, Institute of Computer Graphics and Knowledge Visualization, Austria
+%        $^2$ Another Department to illustrate the use in papers from authors
+%             with different affiliations
+       }
+}
+}
+% ------------------------------------------------------------------------
+
+% if the Editors-in-Chief have given you the data, you may uncomment
+% the following five lines and insert it here
+%
+% \volume{36}   % the volume in which the issue will be published;
+% \issue{1}     % the issue number of the publication
+% \pStartPage{1}      % set starting page
+
+
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+% uncomment for using teaser
+% \teaser{
+%  \includegraphics[width=0.9\linewidth]{eg_new}
+%  \centering
+%   \caption{New EG Logo}
+% \label{fig:teaser}
+%}
+
+\maketitle
+%-------------------------------------------------------------------------
+\begin{abstract}
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+%-------------------------------------------------------------------------
+
+\section{Introduction}
+
+\section{Background}
+
+\section{Methods}
+
+\section{Implementation}
+
+\section{Evaluation and Results}
+
+\section{Conclusions and Future Work}
+
+\autocite{Seidel93}
+
+\textcite{Seidel93}
+
+%-------------------------------------------------------------------------
+% bibtex
+% \bibliographystyle{eg-alpha-doi}
+% \bibliography{egbibsample}
+
+% biblatex with biber
+\nocite{*}
+\printbibliography
+
+%-------------------------------------------------------------------------
+
+\end{document}
